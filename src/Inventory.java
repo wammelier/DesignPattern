@@ -24,7 +24,8 @@ public class Inventory {
         }
         return null;
     }
-    public Guitar search(Guitar searchGuitar) {
+    public List<Guitar> search(Guitar searchGuitar) {
+        List matchingGuitars = new LinkedList();
         for (Iterator i = guitars.iterator(); i.hasNext(); ) {
             Guitar guitar = (Guitar)i.next();
             // 일련번호는 유일한 값이니까 무시
@@ -44,8 +45,8 @@ public class Inventory {
             String topWood = searchGuitar.getTopWood();
             if ((topWood != null) && (!topWood.equals("")) && (!topWood.equals("")) && (!topWood.equals(guitar.getTopWood())))
                 continue;
-            return guitar;
+            matchingGuitars.add(guitar);
         }
-        return null;
+        return matchingGuitars;
     }
 }
