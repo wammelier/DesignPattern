@@ -24,26 +24,21 @@ public class Inventory {
         }
         return null;
     }
-    public List<Guitar> search(Guitar searchGuitar) {
+    public List search(GuitarSpec searchSpec) {
         List matchingGuitars = new LinkedList();
         for (Iterator i = guitars.iterator(); i.hasNext(); ) {
             Guitar guitar = (Guitar)i.next();
-            // 일련번호는 유일한 값이니까 무시
-            // 가격은 유일한 값이니까 무시
-            String builder = searchGuitar.getBuilder();
-            if ((builder != null) && (!builder.equals("")) && (!builder.equals(guitar.getBuilder())))
+            GuitarSpec guitarSpec = guitar.getSpec();
+            if (searchSpec.getBuilder() != guitarSpec.getBuilder())
                 continue;
-            String model = searchGuitar.getModel();
-            if ((model != null) && (!model.equals("")) && (!model.equals(guitar.getModel())))
+            String model = searchSpec.getModel().toLowerCase();
+            if ((model != null) && (!model.equals("")) && (!model.equals(guitarSpec.getModel().toLowerCase())))
                 continue;
-            String type = searchGuitar.getType();
-            if ((type != null) && (!searchGuitar.equals("")) && (!type.equals(guitar.getType())))
+            if ((searchSpec.getType() != guitarSpec.getType()))
                 continue;
-            String backWood = searchGuitar.getBackWood();
-            if ((backWood != null) && (!backWood.equals("")) && (!backWood.equals(guitar.getBackWood())))
+            if ((searchSpec.getBackWood() != guitarSpec.getBackWood()))
                 continue;
-            String topWood = searchGuitar.getTopWood();
-            if ((topWood != null) && (!topWood.equals("")) && (!topWood.equals("")) && (!topWood.equals(guitar.getTopWood())))
+            if ((searchSpec.getTopWood() != guitarSpec.getTopWood()))
                 continue;
             matchingGuitars.add(guitar);
         }

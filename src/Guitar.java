@@ -1,6 +1,7 @@
 public class Guitar {
 
     private String serialNumber, builder, model, type, backWood, topWood;
+    private GuitarSpec spec;
     private double price;
 
     public Guitar(String serialNumber, double price,
@@ -13,6 +14,10 @@ public class Guitar {
         this.type = type;
         this.backWood = backWood;
         this.topWood = topWood;
+    }
+
+    public GuitarSpec getSpec() {
+        return spec;
     }
 
     public String getSerialNumber() {
