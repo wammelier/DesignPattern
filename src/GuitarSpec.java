@@ -20,12 +20,14 @@ public class GuitarSpec {
     public String getModel() {
         return model;
     }
+
     public Type getType() {
         return type;
     }
     public Wood getBackWood() {
         return backWood;
     }
+    
     public Wood getTopWood() {
         return topWood;
     }
