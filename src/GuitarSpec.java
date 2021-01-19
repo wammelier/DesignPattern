@@ -17,6 +17,7 @@ public class GuitarSpec {
     public Builder getBuilder() {
         return builder;
     }
+    
     public String getModel() {
         return model;
     }
@@ -27,7 +28,7 @@ public class GuitarSpec {
     public Wood getBackWood() {
         return backWood;
     }
-    
+
     public Wood getTopWood() {
         return topWood;
     }
