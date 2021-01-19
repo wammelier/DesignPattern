@@ -25,7 +25,7 @@ public class GuitarSpec {
     public Type getType() {
         return type;
     }
-    
+
     public Wood getBackWood() {
         return backWood;
     }

@@ -15,11 +15,11 @@ public class FindGuitarTester {
             for (Iterator i = matchingGuitar.iterator(); i.hasNext(); ) {
                 Guitar guitar = (Guitar)i.next();
                 GuitarSpec spec = guitar.getSpec();
-                System.out.println(
-                 guitar.getBuilder() + "" + guitar.getModel() + "" +
-                    guitar.getType() + " guitar:\n " +
-                    guitar.getTopWood() + " top.|nYou can have it for only $" +
-                    guitar.getPrice() + "!");
+                System.out.println("We have a " +
+                        spec.getBuilder() + "" + spec.getModel() + "" +
+                         spec.getType() + " guitar:\n " +
+                         spec.getTopWood() + " top.|nYou can have it for only $" +
+                         guitar.getPrice() + "!");
             }
         } else {
             System.out.println("Sorry, Erin, we have nothing for you.");
