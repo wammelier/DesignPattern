@@ -1,3 +1,5 @@
+package erinGuitar;
+
 public class GuitarSpec {
 
     private Type type;
@@ -11,6 +13,7 @@ public class GuitarSpec {
                       Wood backWood, Wood topWood, int numString) {
         this.builder = builder;
         this.type = type;
+        this.model = model;
         this.backWood = backWood;
         this.topWood = topWood;
         this.numString = numString;

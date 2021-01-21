@@ -1,3 +1,5 @@
+package erinGuitar;
+
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -26,6 +28,7 @@ public class Inventory {
     public List search(GuitarSpec searchSpec) {
         List matchingGuitars = new LinkedList();
         for (Iterator i = guitars.iterator(); i.hasNext(); ) {
+            System.out.println("i" + i);
             Guitar guitar = (Guitar) i.next();
             if (guitar.getSpec().matches(searchSpec))
                 matchingGuitars.add(guitar);

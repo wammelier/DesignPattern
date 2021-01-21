@@ -1,3 +1,5 @@
+package erinGuitar;
+
 public class Guitar {
 
     private String serialNumber;

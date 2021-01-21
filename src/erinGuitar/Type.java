@@ -1,3 +1,5 @@
+package erinGuitar;
+
 public enum Type {
 
     ACOUSTIC, ELECTRIC;
