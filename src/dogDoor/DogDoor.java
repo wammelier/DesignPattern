@@ -1,8 +1,12 @@
 package dogDoor;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class DogDoor {
 
     private boolean open;
+    private Bark allowedBark;
 
     public DogDoor() {
         this.open = false;
@@ -11,6 +15,15 @@ public class DogDoor {
     public void open() {
         System.out.println("jThe dog door opens.");
         open = true;
+
+        final Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                close();
+                timer.cancel();
+            }
+        }, 5000);
     }
 
     public void close() {
@@ -20,5 +33,13 @@ public class DogDoor {
 
     public boolean isOpen() {
         return open;
+    }
+
+    public void setAllowedBark(Bark bark) {
+        this.allowedBark = bark;
+    }
+
+    public Bark getAllowedBark() {
+        return allowedBark;
     }
 }
