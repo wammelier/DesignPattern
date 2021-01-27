@@ -42,4 +42,8 @@ public class DogDoor {
     public Bark getAllowedBark() {
         return allowedBark;
     }
+
+    public void addAllowedBark(Bark bark) {
+        this.allowedBark = bark;
+    }
 }
