@@ -1,12 +1,13 @@
 package dogDoor;
 
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class DogDoor {
 
     private boolean open;
-    private Bark allowedBark;
+    private List<Bark> allowedBark;
 
     public DogDoor() {
         this.open = false;
@@ -35,15 +36,15 @@ public class DogDoor {
         return open;
     }
 
-    public void setAllowedBark(Bark bark) {
+    public void setAllowedBark(List<Bark> bark) {
         this.allowedBark = bark;
     }
 
-    public Bark getAllowedBark() {
+    public List<Bark> getAllowedBark() {
         return allowedBark;
     }
 
     public void addAllowedBark(Bark bark) {
-        this.allowedBark = bark;
+        this.allowedBark.add(bark);
     }
 }
