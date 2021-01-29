@@ -2,14 +2,18 @@ package erinGuitar;
 
 public class Guitar {
 
-    private String serialNumber;
+//    private String serialNumber;
     private GuitarSpec spec;
-    private double price;
+//    private double price;
 
-    public Guitar(String serialNumber,
-                  double price, GuitarSpec spec) {
-        this.serialNumber = serialNumber;
-        this.price = price;
+//    public Guitar(String serialNumber,
+//                  double price, GuitarSpec spec) {
+//        this.serialNumber = serialNumber;
+//        this.price = price;
+//        this.spec = spec;
+//    }
+
+    public Guitar( GuitarSpec spec ) {
         this.spec = spec;
     }
 
@@ -17,15 +21,15 @@ public class Guitar {
         return spec;
     }
 
-    public String getSerialNumber() {
-        return serialNumber;
-    }
+//    public String getSerialNumber() {
+//        return serialNumber;
+//    }
 
-    public double getPrice() {
-        return price;
-    }
-    public void setPrice(float newPrice) {
-        this.price = newPrice;
-    }
+//    public double getPrice() {
+//        return price;
+//    }
+//    public void setPrice(float newPrice) {
+//        this.price = newPrice;
+//    }
 
 }

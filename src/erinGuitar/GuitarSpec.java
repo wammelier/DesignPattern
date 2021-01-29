@@ -60,4 +60,8 @@ public class GuitarSpec {
         return numString;
     }
 
+    public boolean marches(GuitarSpec spec) {
+        return false;
+    }
+
 }
