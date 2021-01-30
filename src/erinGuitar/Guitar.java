@@ -1,6 +1,6 @@
 package erinGuitar;
 
-public class Guitar {
+public class Guitar extends Instrument {
 
 //    private String serialNumber;
     private GuitarSpec spec;
@@ -13,7 +13,8 @@ public class Guitar {
 //        this.spec = spec;
 //    }
 
-    public Guitar( GuitarSpec spec ) {
+    public Guitar(String serialNumber, double price, GuitarSpec spec) {
+        super(serialNumber, price, spec);
         this.spec = spec;
     }
 

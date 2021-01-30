@@ -10,7 +10,7 @@ public class FindGuitarTester {
         Inventory inventory = new Inventory();
         GuitarSpec guitarSpec = new GuitarSpec(Builder.FENDER, "Stratocaster", Type.ELECTRIC, Wood.ALDER, Wood.ALDER, 6);
 
-        inventory.addGuitar("aaaaa", 124213, guitarSpec);
+        inventory.addInstrument("aaaaa", 124213, guitarSpec);
         initializeInventory(inventory);
 
         GuitarSpec whatErinLikes = new GuitarSpec(Builder.FENDER, "Stratocaster", Type.ELECTRIC, Wood.ALDER, Wood.ALDER, 6);

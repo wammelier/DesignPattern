@@ -1,41 +1,48 @@
 package erinGuitar;
 
 
-public class MandolinSpec {
+public class MandolinSpec extends InstrumentSpec {
 
-    private Builder builder;
-    private String model;
-    private Type type;
     private Style style;
-    private Wood backWood;
-    private Wood topWood;
 
-    public Builder getBuilder() {
-        return builder;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public Type getType() {
-        return type;
+    public MandolinSpec(Builder builder, String model, Type type, Style style, Wood backWood, Wood topWood) {
+        super(builder, model, type, backWood, topWood);
+        this.style = style;
     }
 
     public Style getStyle() {
         return style;
     }
 
-    public Wood getBackWood() {
-        return backWood;
+    public boolean matches(MandolinSpec otherSpec) {
+        if (!super.matches(otherSpec))
+            return false;
+        if (!(otherSpec instanceof MandolinSpec))
+            return false;
+        MandolinSpec spec = (MandolinSpec)otherSpec;
+        if (!style.equals(spec.style))
+            return false;
+        return true;
     }
 
-    public Wood getTopWood() {
-        return topWood;
-    }
+//    public Builder getBuilder() {
+//        return builder;
+//    }
+//
+//    public String getModel() {
+//        return model;
+//    }
+//
+//    public Type getType() {
+//        return type;
+//    }
 
-    public boolean matches(MandolinSpec spec) {
-        return false;
-    }
+//    public Wood getBackWood() {
+//        return backWood;
+//    }
+//
+//    public Wood getTopWood() {
+//        return topWood;
+//    }
 
 }
