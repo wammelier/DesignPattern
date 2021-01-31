@@ -21,12 +21,12 @@ public class FindGuitarTester {
             for (Iterator i = matchingGuitar.iterator(); i.hasNext(); ) {
                 Guitar guitar = (Guitar)i.next();
                 GuitarSpec spec = guitar.getSpec();
-                System.out.println("We have a " +
-                        spec.getBuilder() + " " + spec.getModel() + " " +
-                         spec.getType() + " guitar:\n       " +
-                        spec.getBackWood() + " back and sides, \n      " +
-                         spec.getTopWood() + " top.\nYou can have it for only $" +
-                         guitar.getPrice() + "!\n ------");
+//                System.out.println("We have a " +
+//                        spec.getBuilder() + " " + spec.getModel() + " " +
+//                         spec.getType() + " guitar:\n       " +
+//                        spec.getBackWood() + " back and sides, \n      " +
+//                         spec.getTopWood() + " top.\nYou can have it for only $" +
+//                         guitar.getPrice() + "!\n ------");
             }
         } else {
             System.out.println("Sorry, Erin, we have nothing for you.");
