@@ -51,13 +51,13 @@ public class Inventory {
         return matchingGuitars;
     }
 
-    public List search(MandolinSpec searchSpec) {
-        List matchingMandolins = new LinkedList();
+    public List search(InstrumentSpec searchSpec) {
+        List matchingInstruments = new LinkedList();
         for (Iterator i = inventory.iterator(); i.hasNext();) {
-            Mandolin mandolin = (Mandolin)i.next();
-            if (mandolin.getSpec().matches(searchSpec))
-                matchingMandolins.add(mandolin);
+            Instrument instrument = (Instrument)i.next();
+            if (instrument.getSpec().matches(searchSpec))
+                matchingInstruments.add(instrument);
         }
-        return matchingMandolins;
+        return matchingInstruments;
     }
 }
